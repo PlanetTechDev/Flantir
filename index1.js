@@ -24,3 +24,14 @@ function animateOnScroll() {
   }
   
   window.addEventListener('scroll', animateOnScroll);
+
+  const question = document.querySelectorAll('.qna-questions');
+
+  question.forEach(q => {
+    q.addEventListener('click', () => {
+      q.nextElementSibling.classList.toggle('show');
+      q.querySelector('button i').classList.toggle('uil-minus-circle');
+      q.querySelector('button i').classList.toggle('uil-plus-circle');
+    });
+  });
+  
