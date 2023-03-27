@@ -1,0 +1,374 @@
+* {
+    margin: 0;
+    font-family:  General Sans, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    
+    margin: 0;
+  }
+
+
+/* Navigation Styling */
+
+nav {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-bottom: 1px solid;
+    padding: 20px;
+    color: #000000;
+    border-bottom: 1px solid #0000003d;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  .navigation {
+    display: flex;
+    flex-grow: 1;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navigation li {
+    margin: 0 20px;
+  }
+  
+  .navigation li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .waitlist {
+    margin-left: auto;
+  }
+  
+  .waitlist a.button {
+    display: inline-block;
+    padding: 15px 50px;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 100px;
+   
+  }
+  
+  .popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    margin-top: 5em;
+    font-weight: 500;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    background-color:#ffffff;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+    
+  }
+  
+  .popup.show {
+    display: block;
+    animation: slide-in 1s;
+  }
+  
+  @keyframes slide-in {
+    from {
+      transform: translateY(-100%) translateX(-50%);
+    }
+    to {
+      transform: translateY(0%) translateX(-50%);
+    }
+  }
+
+   
+  
+  
+  
+  @media screen and (max-width: 768px) {
+    nav {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 10px;
+    }
+  
+    .navigation {
+      display: none;
+      flex-basis: 100%;
+      margin-top: 20px;
+    }
+  
+    .navigation li {
+      margin: 10px;
+    }
+  
+    .waitlist {
+        margin-left: auto;
+      }
+      
+      .waitlist a.button {
+        display: inline-block;
+        padding: 15px 50px;
+        background-color: #000000;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 500;
+        border-radius: 100px;
+      }
+  
+    .menu-toggle {
+      display: block;
+      order: 1;
+      margin-right: 10px;
+      font-size: 18px;
+      color: #000000;
+      cursor: pointer;
+    }
+  
+    .menu-toggle:before {
+      content: "\f0c9";
+      font-family: FontAwesome;
+      font-weight: 400;
+    }
+  
+    .menu-toggle.active:before {
+      content: "\f00d";
+    }
+  
+    .navigation.active {
+      display: block;
+      width: 100%;
+    }
+    
+    
+  }
+
+  /* Main hero section */
+
+  .main-hero-section {
+    height: 650px;
+    width: 100%;
+    background-image: linear-gradient(75deg,#FFFFFF,#D0E3FF);
+    position: relative;
+  }
+  
+  .main-hero-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+  }
+  
+  .main-hero-s1 {
+    padding-top: 7em;
+    height: 400px;
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+  }
+
+  .main-hero-s1 h1 {
+    color: #1E2B4A;
+    text-align: center;
+    font-size: 2.5em;
+  }
+
+  .main-hero-s1 p {
+    color: #1E2B4A;
+    opacity: 70%;
+    font-weight: 500;
+    margin-top: 2em;
+    font-size: 1.1em;
+  }
+ 
+ 
+ 
+
+
+  .main-hero-cta {
+    height: 65px;
+    width: 80%;
+    justify-content: space-evenly;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    
+    margin-top: 2em;
+  }
+
+  .main-hero-cta button {
+    border-radius: 1000em;
+    border: none;
+  }
+
+  .main-hero-cta :nth-child(1) {
+    background-image: linear-gradient(125deg, #20D7AB, #2292C2, #23A3FF);
+    font-weight: 500;
+    color: white;
+    width: 30%;
+    width: 20em;
+    transition: all 300ms ease;
+  }
+  
+  .main-hero-cta :nth-child(1):hover {
+    background-image: linear-gradient(35deg, #20D7AB, #2292C2, #23A3FF);
+    cursor: pointer;
+    animation: fade 400ms;
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0.88;
+      
+    }
+    100% {
+      opacity: 1;
+      
+    }
+  }
+  
+  
+
+  .main-hero-cta :nth-child(2) {
+    color: white;
+    width: 20em;
+    border: 1.5px solid #B6B6B6;
+    color: black;
+    font-weight: 500;
+  }
+
+  .coming-soon {
+    display: inline-block;
+    background-image: linear-gradient(50deg, #20D7AB, #2292C2, #23A3FF);
+    color: #fff;
+    padding: 4px 8px;
+    margin-right: 10px;
+    font-size: 11px;
+    font-weight: 400;
+    border-radius: 100px;
+  }
+  
+
+  .purpledots {
+    color: #6171FD;
+  }
+
+  .slash {
+    text-decoration: line-through;
+  }
+
+.main-hero-pricingab {
+    font-size: 0.9em;
+}
+
+.main-hero-section-transition {
+    background-image: linear-gradient(125deg,#FFFFFF,#D0E3FF);
+    height: 50px;
+    backdrop-filter: blur(400px);
+    
+    
+}
+
+.sub-hero-showcase {
+    height: 800px;
+    width: 100%;
+    
+}
+
+.sub-hero-s1 {
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    
+
+
+  }
+.sub-hero-s1 img {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+/* Section 1 Hero */
+
+
+  .section-1-hero {
+    height: 500px;
+    width: 100%;
+   
+    margin-top: 15em;
+    display: flex;
+    
+}
+
+.section-1-s1 {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #fff;
+    height: 400px;
+    margin-top: 8em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-1-div {
+   
+    width: 45%;
+}
+.section-2-div {
+   
+    width: 55%;
+}
+
+.images-21 {
+    width: 100%;
+}
+
+
+.section-1-div :nth-child(1){
+  color: #1E2B4A;
+  font-size: 2.5em;
+}
+.section-1-div :nth-child(2){
+  color: #1E2B4A;
+  font-size: 1.1em;
+  margin-top: 2em;
+  opacity: 60%;
+  font-weight: 500;}
+
+.section-1-div :nth-child(3){
+  color: #1E2B4A;
+  font-size: 1.1em;
+  margin-top: 4em;
+  opacity: 60%;
+  font-weight: 500;
+}
+
+.q-and-a-hero {
+  height: 800px;
+  width: 100%;
+  background-color: #1E2B4A;
+  margin-top: 15em;
+  display: flex;
+  border-radius: 0px 400px 0px 0px;
+}
+
+.q-and-a-wrapper{
+  width: 70%;
+  margin-top: 4em;
+  margin-left: 4em;
+  background-color: #5472b8;
+
+}
